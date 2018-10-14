@@ -1,0 +1,18 @@
+def aud_brl(amount, From, to):
+    ER = 0.42108
+    if From.strip() == 'aud' and to.strip() == 'brl':
+        result = amount/ER
+    elif From.strip() == 'brl' and to.strip() == 'aud':
+        result = amount*ER
+
+    print(result)
+
+def question():
+    amount = float(input("Amount: "))
+    From = input("From: ")
+    to = input("To: ")
+
+    if (From == 'aud' or From == 'brl') and (to == 'aud' or to == 'brl'):
+        aud_brl(amount, From, to)
+
+question()

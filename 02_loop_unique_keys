@@ -1,0 +1,17 @@
+DATABASE = [
+    {'last_name': 'Jiménez'},
+    {'first_name': 'Mark', 'last_name': 'Watney'},
+    {'first_name': 'Иван', 'age': 42},
+    {'first_name': 'Matt', 'last_name': 'Kowalski', 'born': 1961},
+    {'first_name': 'José', 'born': 1961, 'agency': 'NASA'},
+]
+
+# ustawiam pusty set
+moj_set = set()
+
+#po kazdym elemencie szukam kluczy i updateuje / NIE ADD
+for element in DATABASE:
+    moj_set.update(element.keys())
+    # print(f'value: "{element}"')
+
+print(moj_set)
